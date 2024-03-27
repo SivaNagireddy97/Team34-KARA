@@ -24,12 +24,13 @@ An examination of the frequency of repeated abuse cases provides insight into th
 
 Required Columns: State(String)	Year	Emotional Abuse (%)	Medical Neglect (%)	Neglect (%)	Physical Abuse (%)	Sexual Abuse (%)	Trafficking (%)	Other (%)	Missing Data (%)
 
-**4.	How do referral sources impact the likelihood of CPS intakes being screened in for further action?"**
-By analyzing how different referral sources affect the likelihood of CPS intakes being screened for further action, this inquiry seeks to uncover potential biases or efficiencies within the referral process.
+****4** What factors influence the placement of children in different types of foster care (CPA, DFPS,Kinship,adoptive homes) and within each category (relative, non-relative), using demographic features like age, gender, race,  county and type of substitute care?**
+Features required: Age, Gender, Race_Ethnicity, Type of Substitute care(Foster care or Other Substitute care) and County(for geographical disparities if any).
+The Target Feature: Placement_type.
+With this we aim to achieve the following insights:
+Understanding trends in foster care placements across different counties.
+Identifying disparities or biases in placement decisions 
 
-CPS_Intakes.csv
-
-Required Columns: Intake_Year	County(String)	REFERENT_TYPE(String)	DECISION(String)	Age_Group(Int)	child_count(Int)
 
 **Models and Algorithms:**
 
@@ -37,18 +38,10 @@ For Analysis of Child Abuse Types and Rates:
 
 •	**Descriptive Statistical Analysis**: We will use descriptive statistics to summarize the data, including mean, median, and standard deviation.
 
-For CPS Intake and Referral Process Effectiveness:
 
-•	**Logistic Regression**: This could be used to model the probability of cases being screened in versus screened out.
+For Different types of Foster Care Placement Classification:
 
-•	**Random Forests**: This algorithm can provide insight into the importance of different factors influencing the screening decision.
-
-For the Impact of Referral Sources:
-
-•	**Classification Models**: Logistic Regression and Random Forest could again be employed here to predict the likelihood of CPS intakes being screened in for further action based on the referral source and other covariates.
-
-•	**Decision Trees**: These models could provide additional insights, offering a clear visualization of decision paths and handling complex interactions between features.
-Few Model Comparison Metrics like Accuracy, Precision, Recall, F1-Score  could be used to evaluate model performances.
+•	**Classification Models**: KNN Model and Random Forests could be used for classification and evaluation.
 
 **Conclusion:**
 The ultimate goal is to distill actionable insights from these analyses, offering evidence-based recommendations for enhancing child welfare systems. 
